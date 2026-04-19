@@ -50,7 +50,7 @@ export const games: GameDef[] = [
     tagline: 'Tactical pandemonium, one round at a time.',
     description:
       'A skill-driven action arena where reflexes meet positioning. Pick a fighter, master the meta and survive the storm in fast, replayable matches built for quick sessions and long climbs.',
-    genres: ['Action', 'Arena', 'PvP'],
+    genres: ['Action', 'Arena', 'Casual', 'Relaxing', 'PvP'],
     preview: 'images/chaos-arena-promotion-no-cta_800x450.webp',
     accent: ['#ff48c6', '#7b3ff2'],
     platforms: [

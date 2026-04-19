@@ -1,5 +1,7 @@
 # hyperg8 — one-pager
 
+available on [hyperg8.com](https://konstantinsteinmiller.github.io/hyperg8/)
+
 The studio site for **hyperg8** — built with **Vue 3 + Vite + TypeScript**, templated in
 **Pug**, styled with **Tailwind CSS** and **Sass**, and deployable as a static bundle
 to GitHub Pages, Surge, any plain static host, or `localhost`.
