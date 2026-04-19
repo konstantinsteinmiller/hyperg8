@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+.vite
+.cache
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+.surge
+.idea
+.vscode/*
+!.vscode/extensions.json

@@ -1,0 +1,7 @@
+# Drop game preview images here
+# Expected filenames (referenced from src/data/games.ts):
+#   rodent-race.jpg
+#   card-quest.jpg
+#   chaos-arena.jpg
+#   spinner-machines.jpg
+# Recommended ratio: 16:10, e.g. 1600x1000.

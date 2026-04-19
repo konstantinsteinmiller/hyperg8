@@ -1,0 +1,34 @@
+{
+  "name": "hyperg8-webpage",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "serve": "vite preview",
+    "build-github-main": "vite build --base=/hyperg8/ --outDir=dist",
+    "build-github-develop": "vite build --base=/spinner-machines/develop/ --outDir=dist/develop",
+    "deploy:surge": "pnpm run build && surge ./dist"
+  },
+  "dependencies": {
+    "marked": "^12.0.2",
+    "vue": "^3.4.27",
+    "vue-i18n": "^9.13.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.38",
+    "pug": "^3.0.3",
+    "sass": "^1.77.2",
+    "surge": "^0.23.1",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vue-tsc": "^2.0.19"
+  }
+}
