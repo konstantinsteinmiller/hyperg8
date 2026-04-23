@@ -9,11 +9,9 @@ within our mobile application, Chaos Battle Arena.
 
 The core principle of our app is data minimization.
 
-    Personal Data: We do not collect, store, or process any personal data (such as name, email address, IP address, or location).
-
-    Usage Data: We do not use any analytics tools (such as Google Analytics or Firebase) to evaluate your gaming behavior.
-
-    Device Information: We do not access your device identifiers (IDFA/AAID), contacts, photos, or camera.
+- **Personal Data:** We do not collect, store, or process any personal data (such as name, email address, IP address, or location).
+- **Usage Data:** We do not use any analytics tools (such as Google Analytics or Firebase) to evaluate your gaming behavior.
+- **Device Information:** We do not access your device identifiers (IDFA/AAID), contacts, photos, or camera.
 
 ### 3. Storage of Game Progress
 

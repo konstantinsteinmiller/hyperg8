@@ -2,7 +2,28 @@
   "permissions": {
     "allow": [
       "Bash(pnpm install *)",
-      "Bash(node_modules/.bin/vue-tsc --noEmit)"
+      "Bash(node_modules/.bin/vue-tsc --noEmit)",
+      "Bash(node_modules/.bin/vite build *)",
+      "Bash(node_modules/.bin/vite *)",
+      "Bash(curl -s \"http://127.0.0.1:5180/src/components/PrivacyModal.vue\")",
+      "Bash(curl -s \"http://127.0.0.1:5180/src/assets/documentation/rights/chaos-arena-privacy-policy-en.md?raw\")",
+      "Bash(curl -s \"http://127.0.0.1:5180/src/assets/documentation/rights/chaos-arena-privacy-policy-en.md?import&raw\")",
+      "Bash(curl -s \"http://127.0.0.1:5180/src/components/PrivacyModal.vue?vue&type=template&scoped=903906ad&lang.js\")",
+      "Bash(xxd src/assets/documentation/rights/chaos-arena-privacy-policy-en.md)",
+      "Read(//mnt/c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Windows/System32/**)",
+      "Bash(mkdir -p /tmp/chrome-profile)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile --virtual-time-budget=6000 --dump-dom \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-en=true\")",
+      "Read(//tmp/**)",
+      "Bash(LC_ALL=en_US.UTF-8 awk '/class=\"privacy-modal__body\"/{found=1} found{print; if\\(/<\\\\/div>/ && --count<0\\) count++} found && /<\\\\/div>/{exit}' /tmp/dom-en.html)",
+      "Bash(LC_ALL=en_US.UTF-8 awk '/class=\"privacy-modal__body\">/{p=1} p{printf \"%s\", $0}' /tmp/dom-en.html)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile2 --virtual-time-budget=6000 --dump-dom \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-de=true\")",
+      "Bash(LC_ALL=en_US.UTF-8 awk '/class=\"privacy-modal__body\">/{p=1} p{printf \"%s\", $0}' /tmp/dom-de.html)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile3 --virtual-time-budget=6000 --window-size=1280,900 --screenshot=/tmp/en-screen.png \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-en=true\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile4 --virtual-time-budget=6000 --window-size=1280,900 --screenshot=/tmp/de-screen.png \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-de=true\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile5 --virtual-time-budget=6000 --window-size=1280,900 --screenshot=/tmp/en2-screen.png \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-en=true\")",
+      "Bash(kill %1)"
     ]
   }
 }
