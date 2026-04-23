@@ -9,16 +9,27 @@ VModal.privacy-modal.no-bg(class="!max-w-2xl" @close="emit('close')")
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted } from 'vue'
 import VModal from '@/components/atoms/VModal.vue'
 import XButton from '@/components/atoms/XButton.vue'
 import useMarkdown from '@/use/useMarkdown'
+import useModals from '@/use/useModals'
 
-// Loaded as a raw string so the user can update privacy-policy.md
+// Loaded as raw strings so the source markdown can be edited
 // independently — Vite re-builds the bundle on save.
 import privacyMd from '@/assets/privacy-policy.md?raw'
+import chaosArenaEnMd from '@/assets/documentation/rights/chaos-arena-privacy-policy-en.md?raw'
+import chaosArenaDeMd from '@/assets/documentation/rights/chaos-arena-privacy-policy-de.md?raw'
 
-const source = ref(privacyMd)
+const { privacyVariant } = useModals()
+
+const source = computed(() => {
+  switch (privacyVariant.value) {
+    case 'chaos-arena-en': return chaosArenaEnMd
+    case 'chaos-arena-de': return chaosArenaDeMd
+    default: return privacyMd
+  }
+})
 const { html } = useMarkdown(source)
 
 const emit = defineEmits(['close'])

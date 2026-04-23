@@ -65,12 +65,16 @@ export const games: GameDef[] = [
     title: 'Card Quest',
     tagline: 'Build your deck. Bend your fate.',
     description:
-      'A roguelike deck-builder where every encounter rewrites your hand. Forge synergies, unlock rare arcana and chase the perfect run through a constantly mutating world of cards.',
-    genres: ['Strategy', 'Card', 'Deck-builder'],
+      'A deck-builder where every encounter rewrites your hand. Collect ever stronger cards and play the enemy with your crazy combos.',
+    genres: ['Strategy', 'Card', 'Deck-builder', 'TrippleTriad-like'],
     preview: 'images/card-quest-promotion_800x450.webp',
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
       { platform: 'steam', upcoming: true, label: 'Coming soon' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/' },
+      // { platform: 'itch', url: 'https://itch.io/' },
+      { platform: 'wavedash', upcoming: true, label: 'Coming soon' },
+      { platform: 'itch', upcoming: true, label: 'Coming soon' },
     ],
     windowsPurchase: { enabled: false },
   },
