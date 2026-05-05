@@ -56,7 +56,7 @@ export default {
     copy1:
       'hyperg8 is a tiny independent studio chasing the joy of a perfect mechanic. We build games we want to play ourselves: deep enough to master, light enough to fit a coffee break.',
     copy2:
-      'Every release is a complete, self-contained experience — shady price hikes, no dark patterns. Just craft.',
+      'Every release is a complete, self-contained experience — no shady price hikes, no dark patterns. Just craft.',
     pillars: {
       design: { title: 'Design first', body: 'Mechanics that respect your time and your intelligence.' },
       replay: { title: 'Built for replay', body: 'Tight loops, fair systems, runs you want to start again.' },
