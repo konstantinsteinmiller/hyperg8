@@ -23,7 +23,7 @@ section#top.hero(ref="root")
         span {{ $t('hero.ctaSecondary') }}
     .hero__stats
       .hero__stat
-        b 4
+        b {{ games.length }}
         span {{ $t('hero.stats.titles') }}
       .hero__stat
         b 6+
@@ -39,6 +39,7 @@ section#top.hero(ref="root")
 <script setup lang="ts">
 import { ref } from 'vue'
 import useParallax from '@/use/useParallax'
+import { games } from '@/data/games'
 
 const root = ref<HTMLElement | null>(null)
 const bgRef = ref<HTMLElement | null>(null)

@@ -26,7 +26,7 @@ export default {
       accent2: ' play.',
     },
     lede:
-      'hyperg8 is the studio behind Rodent Race, Card Quest, Chaos Arena and Spinner Machines — bite-sized strategy, action and card games designed for one more round.',
+      'hyperg8 is the studio behind Chaos Arena, Nexus Orbiter, Card Quest, Rodent Race, Spinner Machines and Solariancer — bite-sized arcade, action, card, physics and idle games designed for one more round.',
     ctaPrimary: 'See the games',
     ctaSecondary: 'About the studio',
     stats: {
@@ -40,7 +40,7 @@ export default {
     eyebrow: '⌁ track record',
     title: 'Games we have shipped.',
     lede:
-      'Four worlds, four very different ways to play. Pick a card, hit the arena or send a spinner flying — each title is built to be picked up in seconds and replayed for hours.',
+      'A growing catalogue of very different ways to play. Fling a spinner, flip an orbital drone, draw a fairy card, race a rodent or herd celestial bodies into the Sun — each title is built to be picked up in seconds and replayed for hours.',
   },
   card: {
     platformsTitle: 'Play it on',

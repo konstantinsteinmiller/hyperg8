@@ -64,6 +64,20 @@ export const games: GameDef[] = [
     windowsPurchase: { enabled: false },
   },
   {
+    id: 'nexusorbiter',
+    title: 'Nexus Orbiter',
+    tagline: 'One tap. One drone. Hold the line.',
+    description:
+      'Tap to flip your orbital drone — auto-fire defense vs bosses, EMPs, homing drones, and glue bombs. Single-finger orbital-defense arcade. Your drone orbits a fragile space station and auto-fires at incoming hazards — tap to flip the orbit direction.',
+    genres: ['Arcade', 'Casual', 'One-tap', 'Orbital Defense'],
+    preview: 'images/nexusorbiter-promotion_800x450.webp',
+    accent: ['#00d4ff', '#a259ff'],
+    platforms: [
+      { platform: 'glitch', url: 'https://glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992/play' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
     id: 'card-quest',
     title: 'Card Quest',
     tagline: 'Build your deck. Bend your fate.',
@@ -102,20 +116,6 @@ export const games: GameDef[] = [
     accent: ['#00d4ff', '#3a59ff'],
     platforms: [
       { platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/spinner-machines' },
-    ],
-    windowsPurchase: { enabled: false },
-  },
-  {
-    id: 'nexusorbiter',
-    title: 'Nexus Orbiter',
-    tagline: 'One tap. One drone. Hold the line.',
-    description:
-      'Tap to flip your orbital drone — auto-fire defense vs bosses, EMPs, homing drones, and glue bombs. Single-finger orbital-defense arcade. Your drone orbits a fragile space station and auto-fires at incoming hazards — tap to flip the orbit direction.',
-    genres: ['Arcade', 'Casual', 'One-tap', 'Orbital Defense'],
-    preview: 'images/nexusorbiter-promotion_800x450.webp',
-    accent: ['#00d4ff', '#a259ff'],
-    platforms: [
-      { platform: 'glitch', url: 'https://glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992/play' },
     ],
     windowsPurchase: { enabled: false },
   },
