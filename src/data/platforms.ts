@@ -16,6 +16,8 @@ export interface PlatformDef {
   color: string
   /** raw SVG inner markup, designed for a 24x24 viewBox */
   icon: string
+  /** optional raster icon (path under public/) — when set, takes precedence over `icon` */
+  iconImage?: string
 }
 
 export const platforms: Record<string, PlatformDef> = {
@@ -30,6 +32,7 @@ export const platforms: Record<string, PlatformDef> = {
     label: 'CrazyGames',
     color: '#7b3ff2',
     icon: `<path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2Zm0 2.3 7.5 3.75L12 11.8 4.5 8.05 12 4.3ZM4 9.7l7 3.5v7.6l-7-3.5V9.7Zm9 11.1v-7.6l7-3.5v7.6l-7 3.5Z"/>`,
+    iconImage: 'images/crazygames.webp',
   },
   playstore: {
     id: 'playstore',
@@ -48,6 +51,13 @@ export const platforms: Record<string, PlatformDef> = {
     label: 'Wavedash',
     color: '#00d4ff',
     icon: `<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0M3 18c2-3 4-3 6 0s4 3 6 0 4-3 6 0M3 10c2-3 4-3 6 0s4 3 6 0"/>`,
+  },
+  glitch: {
+    id: 'glitch',
+    label: 'Glitch.fun',
+    color: '#a259ff',
+    icon: `<path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-2 14.5v-9l7 4.5-7 4.5Z"/>`,
+    iconImage: 'images/glitch.webp',
   },
   itch: {
     id: 'itch',

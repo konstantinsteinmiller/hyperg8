@@ -30,7 +30,9 @@ article.game-card(
       header.game-card__header
         h3.game-card__title {{ game.title }}
         p.game-card__tagline {{ game.tagline }}
-      p.game-card__desc {{ game.description }}
+      p.game-card__desc
+        strong.game-card__desc-lead(v-if="game.descriptionLead") {{ game.descriptionLead }}
+        | {{ game.description }}
       section.game-card__platforms(:aria-label="$t('card.platformsTitle')")
         h4.game-card__platforms-title {{ $t('card.platformsTitle') }}
         .game-card__platforms-grid
@@ -284,6 +286,16 @@ const onLeave = () => {
     margin: 0;
     line-height: 1.6;
     font-size: 0.96rem;
+  }
+
+  &__desc-lead {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: 0.02em;
+    font-size: 1rem;
+    margin-bottom: 6px;
   }
 
   &__platforms-title {

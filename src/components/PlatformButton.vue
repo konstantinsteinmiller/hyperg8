@@ -8,7 +8,9 @@ component.platform-btn(
   :aria-disabled="link.upcoming ? 'true' : undefined"
   :style="cssVars"
 )
-  span.platform-btn__icon(v-html="iconSvg" aria-hidden="true")
+  span.platform-btn__icon(aria-hidden="true")
+    img.platform-btn__icon-img(v-if="platform.iconImage" :src="platform.iconImage" :alt="''")
+    span(v-else v-html="iconSvg")
   span.platform-btn__text
     span.platform-btn__label {{ platform.label }}
     span.platform-btn__hint(v-if="link.upcoming || link.label")
@@ -49,8 +51,9 @@ const cssVars = computed(() => ({
   gap: 10px;
   padding: 10px 14px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: color-mix(in srgb, var(--platform-color) 22%, rgba(255, 255, 255, 0.05));
+  border: 1px solid color-mix(in srgb, var(--platform-color) 50%, rgba(255, 255, 255, 0.12));
+  box-shadow: 0 6px 16px -10px color-mix(in srgb, var(--platform-color) 60%, transparent);
   color: #fff;
   text-decoration: none;
   font-size: 0.92rem;
@@ -91,8 +94,23 @@ const cssVars = computed(() => ({
     width: 32px;
     height: 32px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--platform-color, #fff);
+    background: color-mix(in srgb, var(--platform-color) 55%, rgba(20, 24, 50, 0.6));
+    color: #fff;
+  }
+
+  &__icon:has(.platform-btn__icon-img) {
+    background: transparent;
+    border: 1px solid #c0c0c0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    display: block;
   }
 
   &__text {
@@ -112,7 +130,8 @@ const cssVars = computed(() => ({
 
   &__chevron {
     margin-left: auto;
-    opacity: 0.55;
+    opacity: 0.85;
+    color: color-mix(in srgb, var(--platform-color) 60%, #fff);
     transition: transform 220ms ease, opacity 220ms ease;
   }
 

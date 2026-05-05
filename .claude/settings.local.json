@@ -23,7 +23,12 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile3 --virtual-time-budget=6000 --window-size=1280,900 --screenshot=/tmp/en-screen.png \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-en=true\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile4 --virtual-time-budget=6000 --window-size=1280,900 --screenshot=/tmp/de-screen.png \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-de=true\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-profile5 --virtual-time-budget=6000 --window-size=1280,900 --screenshot=/tmp/en2-screen.png \"http://127.0.0.1:5180/?chaos-arena-privacy-policy-en=true\")",
-      "Bash(kill %1)"
+      "Bash(kill %1)",
+      "WebFetch(domain:viteplus.dev)",
+      "Bash(npx vp *)",
+      "Bash(pnpm view *)",
+      "WebFetch(domain:void.app)",
+      "WebFetch(domain:void.cloud)"
     ]
   }
 }

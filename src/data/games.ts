@@ -29,6 +29,8 @@ export interface GameDef {
   title: string
   tagline: string
   description: string
+  /** optional headline rendered in bold above the description */
+  descriptionLead?: string
   /** category chips shown above the title */
   genres: string[]
   /** file inside `public/preview/` — added manually later, missing image falls back to a placeholder */
@@ -48,13 +50,14 @@ export const games: GameDef[] = [
     id: 'chaos-arena',
     title: 'Chaos Arena',
     tagline: 'Tactical pandemonium, one round at a time.',
+    descriptionLead: 'Pull. Launch. CHAOS.',
     description:
-      'A skill-driven action arena where reflexes meet positioning. Pick a fighter, master the meta and survive the storm in fast, replayable matches built for quick sessions and long climbs.',
+      'Fling your spinner into the arena with one simple swipe and watch the mayhem unfold! Smash into enemies, bounce off walls, and knock out every opponent to claim victory. Easy to pick up, impossible to put down. Jump in, start flinging, and let the chaos begin.',
     genres: ['Action', 'Arena', 'Casual', 'Relaxing', 'PvP'],
     preview: 'images/chaos-arena-promotion-no-cta_800x450.webp',
     accent: ['#ff48c6', '#7b3ff2'],
     platforms: [
-      { platform: 'crazygames', url: 'https://www.crazygames.com/' },
+      { platform: 'crazygames', url: 'https://www.crazygames.com/game/chaos-arena' },
       { platform: 'playstore', upcoming: true, label: 'Coming soon' },
       { platform: 'appstore', upcoming: true, label: 'Coming soon' },
     ],
@@ -65,16 +68,12 @@ export const games: GameDef[] = [
     title: 'Card Quest',
     tagline: 'Build your deck. Bend your fate.',
     description:
-      'A deck-builder where every encounter rewrites your hand. Collect ever stronger cards and play the enemy with your crazy combos.',
+      'Card Quest is a card battle game with Triple Triad game rules and strong fantasy visuals and a campaign to collect all fairy cards.',
     genres: ['Strategy', 'Card', 'Deck-builder', 'TrippleTriad-like'],
     preview: 'images/card-quest-promotion_800x450.webp',
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
-      { platform: 'steam', upcoming: true, label: 'Coming soon' },
-      // { platform: 'wavedash', url: 'https://wavedash.com/' },
-      // { platform: 'itch', url: 'https://itch.io/' },
-      { platform: 'wavedash', upcoming: true, label: 'Coming soon' },
-      { platform: 'itch', upcoming: true, label: 'Coming soon' },
+      { platform: 'glitch', url: 'https://glitch.fun/games/f0fbbbdd-4823-4bb6-835d-bf713bf57161/play' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -84,11 +83,11 @@ export const games: GameDef[] = [
     tagline: 'A rodent rumble of speed and chaos.',
     description:
       'Sprint, dash and dive through twisting tracks as the fastest rodent in the underbrush. Outsmart rivals with chained power-ups and physics-driven shortcuts in a ferocious race to the finish line.',
-    genres: ['Action', 'Arcade', 'Racing'],
+    genres: ['Action', 'Arcade', 'Strategy'],
     preview: 'images/rodent-race-promotion_800x450.webp',
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
-      { platform: 'steam', url: 'https://store.steampowered.com/' },
+      { platform: 'steam', url: 'https://store.steampowered.com/app/3393800/Beyond_The_Dark/?l=english' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -102,10 +101,35 @@ export const games: GameDef[] = [
     preview: 'images/spinner-machines-promotion-no-cta_800x500.webp',
     accent: ['#00d4ff', '#3a59ff'],
     platforms: [
-      { platform: 'wavedash', url: 'https://wavedash.com/' },
-      { platform: 'itch', url: 'https://itch.io/' },
-      { platform: 'playstore', upcoming: true, label: 'Maybe later' },
-      { platform: 'appstore', upcoming: true, label: 'Maybe later' },
+      { platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/spinner-machines' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
+    id: 'nexusorbiter',
+    title: 'Nexus Orbiter',
+    tagline: 'One tap. One drone. Hold the line.',
+    description:
+      'Tap to flip your orbital drone — auto-fire defense vs bosses, EMPs, homing drones, and glue bombs. Single-finger orbital-defense arcade. Your drone orbits a fragile space station and auto-fires at incoming hazards — tap to flip the orbit direction.',
+    genres: ['Arcade', 'Casual', 'One-tap', 'Orbital Defense'],
+    preview: 'images/nexusorbiter-promotion_800x450.webp',
+    accent: ['#00d4ff', '#a259ff'],
+    platforms: [
+      { platform: 'glitch', url: 'https://glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992/play' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
+    id: 'solariancer',
+    title: 'Solariancer',
+    tagline: 'Herd the cosmos. Feed the Sun.',
+    description:
+      "Solariancer is a one-touch arcade idle game about herding celestial bodies into the corona of a hungry Sun. The Sun is both the player's primary engine of progress and their constant antagonist — it pulls everything in, but only ripe bodies that have soaked enough heat in orbit pay out when they hit the surface.",
+    genres: ['Arcade', 'Simulation', 'One-touch', 'Casual'],
+    preview: 'images/solariancer-promotion_800x450.webp',
+    accent: ['#ff8a00', '#ff48c6'],
+    platforms: [
+      { platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/solariancer' },
     ],
     windowsPurchase: { enabled: false },
   },
