@@ -16,7 +16,7 @@ export const company = {
   name: 'hyperg8',
   legalName: 'hyperg8',
   tagline: 'Strategy, action and card games crafted with care.',
-  email: 'hello@hyperg8.com',
+  email: 'hyperg8.studio@gmail.com',
   website: 'https://hyperg8.com',
   founded: 2024,
   location: 'Germany',
@@ -29,7 +29,7 @@ Wildgrund 4\n
 Germany\n
 
 **Kontakt**\n
-E-Mail: hello@hyperg8.com
+E-Mail: hyperg8.studio@gmail.com
 
 **Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV**\n
 Konstantin Steinmiller\n

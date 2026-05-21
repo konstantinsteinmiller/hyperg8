@@ -54,7 +54,7 @@ export const games: GameDef[] = [
     description:
       'Fling your spinner into the arena with one simple swipe and watch the mayhem unfold! Smash into enemies, bounce off walls, and knock out every opponent to claim victory. Easy to pick up, impossible to put down. Jump in, start flinging, and let the chaos begin.',
     genres: ['Action', 'Arena', 'Casual', 'Relaxing', 'PvP'],
-    preview: 'images/chaos-arena-promotion-no-cta_800x450.webp',
+    preview: 'images/chaos-arena-promotion_800x450.webp',
     accent: ['#ff48c6', '#7b3ff2'],
     platforms: [
       { platform: 'crazygames', url: 'https://www.crazygames.com/game/chaos-arena' },
@@ -73,7 +73,9 @@ export const games: GameDef[] = [
     preview: 'images/nexusorbiter-promotion_800x450.webp',
     accent: ['#00d4ff', '#a259ff'],
     platforms: [
-      { platform: 'glitch', url: 'https://glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992/play' },
+      { platform: 'playgama', url: 'https://playgama.com/game/nexusorbiter' },
+      { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -87,21 +89,22 @@ export const games: GameDef[] = [
     preview: 'images/card-quest-promotion_800x450.webp',
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
-      { platform: 'glitch', url: 'https://glitch.fun/games/f0fbbbdd-4823-4bb6-835d-bf713bf57161/play' },
+      { platform: 'glitch', url: 'https://www.glitch.fun/games/f0fbbbdd-4823-4bb6-835d-bf713bf57161' },
+      { platform: 'playgama', upcoming: true, label: 'Coming soon' },
     ],
     windowsPurchase: { enabled: false },
   },
   {
-    id: 'rodent-race',
-    title: 'Rodent Race',
-    tagline: 'A rodent rumble of speed and chaos.',
+    id: 'spin-and-mow',
+    title: 'Spin&Mow',
+    tagline: 'A precision platformer with satisfying cuts.',
     description:
-      'Sprint, dash and dive through twisting tracks as the fastest rodent in the underbrush. Outsmart rivals with chained power-ups and physics-driven shortcuts in a ferocious race to the finish line.',
-    genres: ['Action', 'Arcade', 'Strategy'],
-    preview: 'images/rodent-race-promotion_800x450.webp',
+      'Two gears, one chain, a whole jungle to mow down. Swing your saw-bot island-to-island, slice grass, dodge obstacles, climb 20 hand-tuned stages.',
+    genres: ['Platform', 'Arcade', 'Precision', 'Casual'],
+    preview: 'images/spin-and-mow-promotion_800x450.webp',
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
-      { platform: 'steam', url: 'https://store.steampowered.com/app/3393800/Beyond_The_Dark/?l=english' },
+      { platform: 'playgama', url: 'https://playgama.com/game/spinmow' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -112,7 +115,7 @@ export const games: GameDef[] = [
     description:
       'A turn-based physics duel of clashing tops. Bolt together heads, attack rings and bottoms, then send your machine into the arena to outlast the competition. Smart builds beat brute force.',
     genres: ['Strategy', 'Physics', 'Casual'],
-    preview: 'images/spinner-machines-promotion-no-cta_800x500.webp',
+    preview: 'images/spinner-machines-promotion_800x450.webp',
     accent: ['#00d4ff', '#3a59ff'],
     platforms: [
       { platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/spinner-machines' },

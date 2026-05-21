@@ -59,6 +59,20 @@ export const platforms: Record<string, PlatformDef> = {
     icon: `<path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-2 14.5v-9l7 4.5-7 4.5Z"/>`,
     iconImage: 'images/glitch.webp',
   },
+  playgama: {
+    id: 'playgama',
+    label: 'Playgama',
+    color: '#a259ff',
+    iconImage: 'images/playgama.webp',
+    icon: 'images/playgama.webp',
+  },
+  // gamepix: {
+  //   id: 'gamepix',
+  //   label: 'Gamepix',
+  //   color: '#00d4ff',
+  //   iconImage: 'images/gamepix.webp',
+  //   icon: 'images/gamepix.webp',
+  // },
   itch: {
     id: 'itch',
     label: 'itch.io',

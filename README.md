@@ -33,7 +33,7 @@ src/
 
 public/
 ├── favicon.svg
-└── preview/           ← drop game cover images here (rodent-race.jpg, …)
+└── preview/           ← drop game cover images here (chaos-arena.jpg, …)
 ```
 
 ---
@@ -77,7 +77,7 @@ Flip `enabled` to `true` and the standalone Windows .exe purchase button appears
 ## Adding game preview images
 
 Drop a `1600x1000` (16:10) image into `public/preview/` matching the `preview` field in
-`games.ts`, e.g. `public/preview/rodent-race.jpg`. The card falls back to a styled
+`games.ts`, e.g. `public/preview/chaos-arena.jpg`. The card falls back to a styled
 placeholder if the image is missing.
 
 ---

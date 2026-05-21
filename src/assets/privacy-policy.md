@@ -7,7 +7,7 @@ our website and play our games, and what we do with it. We aim to collect as lit
 
 ## 1. Who we are
 
-hyperg8 is an independent game studio. You can reach us at **hello@hyperg8.com** for any privacy
+hyperg8 is an independent game studio. You can reach us at **hyperg8.studio@gmail.com** for any privacy
 related question.
 
 ## 2. What we collect on this website
@@ -31,7 +31,7 @@ gameplay statistics).
 ## 5. Your rights
 
 If we hold any personal data about you, you may at any time request access, correction or
-deletion by writing to **hello@hyperg8.com**. We will respond within a reasonable timeframe.
+deletion by writing to **hyperg8.studio@gmail.com**. We will respond within a reasonable timeframe.
 
 ## 6. Changes
 
