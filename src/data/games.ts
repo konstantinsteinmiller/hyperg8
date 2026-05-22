@@ -109,6 +109,21 @@ export const games: GameDef[] = [
     windowsPurchase: { enabled: false },
   },
   {
+    id: 'supa-tic-tac-toe',
+    title: 'Supa Tic Tac Toe',
+    tagline: 'Deckbuilder meets tic tac toe, live the fantasy!',
+    description:
+      'Tic Tac Toe is too boring, then use skills that you can build from your deck and destroy the enemy! Supa Tic Tac Toe is a card-based twist on the classic tic tac toe game. Players build a deck of unique cards, each with special abilities that can turn the tide of the game.',
+    genres: ['Deckbuilder', 'Arcade', 'Casual', 'Strategy'],
+    preview: 'images/supa-tic-tac-toe-promotion_800x450.webp',
+    accent: ['#ff8a00', '#ff48c6'],
+    platforms: [
+      { platform: 'playgama', upcoming: true, url: 'https://playgama.com/game/supa-tic-tac-toe' },
+      { platform: 'itch', upcoming: true, url: 'https://konstantinsteinmiller.itch.io/supa-tic-tac-toe' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
     id: 'spinner-machines',
     title: 'Spinner Machines',
     tagline: 'Engineer the perfect spin.',
