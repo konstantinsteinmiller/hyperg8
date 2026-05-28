@@ -73,8 +73,9 @@ export const games: GameDef[] = [
     preview: 'images/nexusorbiter-promotion_800x450.webp',
     accent: ['#00d4ff', '#a259ff'],
     platforms: [
+      { platform: 'crazygames', url: 'https://www.crazygames.com/game/nexusorbiter' },
       { platform: 'playgama', url: 'https://playgama.com/game/nexusorbiter' },
-      { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
+      // { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
       // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
     ],
     windowsPurchase: { enabled: false },
