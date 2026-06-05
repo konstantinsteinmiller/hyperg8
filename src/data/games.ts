@@ -81,6 +81,24 @@ export const games: GameDef[] = [
     windowsPurchase: { enabled: false },
   },
   {
+    id: 'epicrolla',
+    title: 'Epicrolla',
+    tagline: 'One tap to switch directions. Endless rolling fun.',
+    description:
+      'Tap to navigate the rolling ball through a winding course of rifts, coins, and obstacles. ' +
+      'Epicrolla is a one-touch arcade game about timing and precision. The ball rolls forward automatically, and the player taps to switch its direction of movement, navigating through increasingly challenging levels.',
+    genres: ['Arcade', 'HyperCasual', 'One-tap', 'Dodge'],
+    preview: 'images/epicrolla-promotion_800x450.webp',
+    accent: ['#00d4ff', '#a259ff'],
+    platforms: [
+      { platform: 'crazygames', url: 'https://www.crazygames.com/game/epicrolla' },
+      // { platform: 'playgama', url: 'https://playgama.com/game/epicrolla' },
+      // { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
     id: 'card-quest',
     title: 'Card Quest',
     tagline: 'Build your deck. Bend your fate.',
