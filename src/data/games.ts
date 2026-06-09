@@ -108,8 +108,8 @@ export const games: GameDef[] = [
     preview: 'images/card-quest-promotion_800x450.webp',
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
+      { platform: 'playgama', url: 'https://playgama.com/game/card-quest' },
       { platform: 'glitch', url: 'https://www.glitch.fun/games/f0fbbbdd-4823-4bb6-835d-bf713bf57161' },
-      { platform: 'playgama', upcoming: true, label: 'Coming soon' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -137,8 +137,8 @@ export const games: GameDef[] = [
     preview: 'images/supa-tic-tac-toe-promotion_800x450.webp',
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
-      { platform: 'playgama', upcoming: true, url: 'https://playgama.com/game/supa-tic-tac-toe' },
-      { platform: 'itch', upcoming: true, url: 'https://konstantinsteinmiller.itch.io/supa-tic-tac-toe' },
+      { platform: 'playgama', url: 'https://playgama.com/game/supa-tic-tac-toe' },
+      { platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/supa-tic-tac-toe' },
     ],
     windowsPurchase: { enabled: false },
   },
