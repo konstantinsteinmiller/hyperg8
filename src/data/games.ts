@@ -81,6 +81,23 @@ export const games: GameDef[] = [
     windowsPurchase: { enabled: false },
   },
   {
+    id: 'tower-siege',
+    title: 'Tower Siege',
+    tagline: 'Stack blocks to defend against hordes of monsters.',
+    description:
+      'Stack a tower, bolt on turrets, and hold the gate. Every wave hits harder — rebuild between them or watch your walls come down block by block.',
+    genres: ['Tower Defense', 'Casual', 'Strategy'],
+    preview: 'images/tower-siege-promotion_800x450.webp',
+    accent: ['#e6df29', '#a259ff'],
+    platforms: [
+      { platform: 'crazygames', url: 'https://www.crazygames.com/game/tower-siege' },
+      // { platform: 'playgama', url: 'https://playgama.com/game/tower-siege' },
+      // { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
     id: 'merge-idle-war',
     title: 'Merge Idle War',
     tagline: `Merge elemental units into a 20-tier army and crush endless enemy waves. Combos, fever gold rushes, meteor storms — the war never stops!`,
@@ -148,7 +165,7 @@ export const games: GameDef[] = [
       'An overpowered version of an bullet hell.',
     genres: ["Bullet Hell", "Arcade", "Survivors", "Casual"],
     preview: 'images/splinter-king-promotion_800x450.webp',
-    accent: ['#ff8a00', '#ff48c6'],
+    accent: ['#00d4ff', '#3a59ff'],
     platforms: [
       { platform: 'playgama', upcoming: true, url: 'https://playgama.com/game/splinter-king' },
     ],
@@ -194,6 +211,24 @@ export const games: GameDef[] = [
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
       { platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/midnight-analog' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
+    id: 'candy-crusher',
+    title: 'Candy Crusher',
+    tagline: 'Spin the cube to catch the candy',
+    description:
+      "A neon arcade reflex game built on a single read: right colour on top, right lane, before the candy lands.\n" +
+      "\n" +
+      "Your cube has four coloured faces, and only the one pointing up can catch anything. So every drop asks two questions at once — which lane, and which face? Get greedy and you will answer one of them wrong.\n" +
+      "\n" +
+      "24 hand-tuned levels across fruit and bakery themes, with bombs to dodge and golden candy worth triple. Plus a Daily Challenge and an Endless run for a high score.\n",
+    genres: ['Arcade', 'Casual', 'One-touch'],
+    preview: 'images/candy-crusher-promotion_800x450.webp',
+    accent: ['#e6df29', 'rgba(0,40,78,0.76)'],
+    platforms: [
+      { platform: 'wavedash', url: 'https://wavedash.com/games/candy-crusher' },
     ],
     windowsPurchase: { enabled: false },
   },
