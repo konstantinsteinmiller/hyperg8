@@ -219,11 +219,7 @@ export const games: GameDef[] = [
     title: 'Candy Crusher',
     tagline: 'Spin the cube to catch the candy',
     description:
-      "A neon arcade reflex game built on a single read: right colour on top, right lane, before the candy lands.\n" +
-      "\n" +
-      "Your cube has four coloured faces, and only the one pointing up can catch anything. So every drop asks two questions at once — which lane, and which face? Get greedy and you will answer one of them wrong.\n" +
-      "\n" +
-      "24 hand-tuned levels across fruit and bakery themes, with bombs to dodge and golden candy worth triple. Plus a Daily Challenge and an Endless run for a high score.\n",
+      "A neon arcade reflex game built on a single read: right colour on top, right lane, before the candy lands. Your cube has four coloured faces, and only the one pointing up can catch anything. So every drop asks two questions at once — which lane, and which face? Get greedy and you will answer one of them wrong.",
     genres: ['Arcade', 'Casual', 'One-touch'],
     preview: 'images/candy-crusher-promotion_800x450.webp',
     accent: ['#e6df29', 'rgba(0,40,78,0.76)'],
