@@ -90,10 +90,32 @@ export const games: GameDef[] = [
     preview: 'images/tower-siege-promotion_800x450.webp',
     accent: ['#e6df29', '#a259ff'],
     platforms: [
-      { platform: 'crazygames', url: 'https://www.crazygames.com/game/tower-siege' },
+      { platform: 'crazygames', upcoming: true, url: 'https://www.crazygames.com/game/tower-siege' },
       // { platform: 'playgama', url: 'https://playgama.com/game/tower-siege' },
-      // { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
-      // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/games/tower-siege' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
+    id: 'survivalist',
+    title: 'Survivalist',
+    tagline: 'Shoot the gates! Beat the hordes of monsters!',
+    description:
+      `You start with three survivors and one road. Every gate is worth more the longer
+your squad shoots it — hold fire on a \`+1\` and watch it climb to \`+20\`. But
+gates come in pairs with a lethal pillar between them, so you have to pick a
+side: the \`×3\`, or the \`+18\`, and never the \`÷5\`. Break green crates to hit
+harder and blue ones to shoot faster, dodge everything solid, and kill what is
+coming down the lane. Every stage ends with a boss. Die, and it comes back
+weaker.`,
+    genres: ['Runner', 'Gun', 'Casual', 'Arcade', '1-Finger'],
+    preview: 'images/survivalist-promotion_800x450.webp',
+    accent: ['#00d4ff', '#a259ff'],
+    platforms: [
+      { platform: 'poki', upcoming: true, url: '/survivalist' },
+      { platform: 'crazygames', upcoming: true, url: 'https://www.crazygames.com/game/survivalist' },
+      // { platform: 'playgama', url: 'https://playgama.com/game/tower-siege' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/games/tower-siege' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -108,7 +130,7 @@ export const games: GameDef[] = [
     accent: ['#00d4ff', '#ff595f'],
     platforms: [
       { platform: 'crazygames', url: 'https://www.crazygames.com/game/merge-idle-war' },
-      // { platform: 'playgama', url: 'https://playgama.com/game/epicrolla' },
+      { platform: 'playgama', url: 'https://playgama.com/game/merge-idle-war' },
     ],
     windowsPurchase: { enabled: false },
   },
@@ -125,6 +147,23 @@ export const games: GameDef[] = [
     platforms: [
       { platform: 'crazygames', url: 'https://www.crazygames.com/game/epicrolla' },
       // { platform: 'playgama', url: 'https://playgama.com/game/epicrolla' },
+    ],
+    windowsPurchase: { enabled: false },
+  },
+  {
+    id: 'reaper-goo',
+    title: 'Reaper Goo',
+    tagline: 'Eat the world and become bigger!',
+    description:
+      `Death has a new shape, and it is adorable. You are a squishy little slime wearing a Reaper's cloak, dragging a 
+      scythe three times your size. Slither through medieval villages devouring everything smaller than you
+       — bugs, peasants, chickens, knights, siege engines, whole castles. Every bite makes you bigger, faster and hungrier, until the map that once towered over you fits in your mouth.`,
+    genres: ["Arcade", "Casual", "3d", "1-Finger"],
+    preview: 'images/reaper-goo-promotion_800x450.webp',
+    accent: ['#ff8a00', '#ff48c6'],
+    platforms: [
+      { platform: 'wavedash', url: 'https://wavedash.com/games/reaper-goo' },
+      // { platform: 'crazygames', url: 'https://www.crazygames.com/game/reaper-goo' },
     ],
     windowsPurchase: { enabled: false },
   },
