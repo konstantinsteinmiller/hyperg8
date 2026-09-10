@@ -58,6 +58,7 @@ export const games: GameDef[] = [
     accent: ['#ff48c6', '#7b3ff2'],
     platforms: [
       { platform: 'crazygames', url: 'https://www.crazygames.com/game/chaos-arena' },
+      { platform: 'youtube', upcoming: true, label: 'Coming soon' },
       { platform: 'playstore', upcoming: true, label: 'Coming soon' },
       { platform: 'appstore', upcoming: true, label: 'Coming soon' },
     ],

@@ -46,8 +46,8 @@ Open `src/data/games.ts` and append to the `platforms` array of the relevant gam
 { platform: 'appstore', url: 'https://apps.apple.com/your-app' }
 ```
 
-If the platform itself is new (i.e. not Steam/CrazyGames/Play Store/App Store/Wavedash/itch.io
-/Windows), register it once in `src/data/platforms.ts` with an id, label, brand color and
+If the platform itself is new (i.e. not Steam/CrazyGames/Poki/YouTube Playables/Playgama/Glitch.fun
+/Play Store/App Store/Wavedash/itch.io/Windows), register it once in `src/data/platforms.ts` with an id, label, brand color and
 inline SVG icon. The button styling is automatic.
 
 To mark something as upcoming:
