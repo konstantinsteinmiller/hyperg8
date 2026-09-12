@@ -100,7 +100,6 @@ const cssVars = computed(() => ({
 
   &__icon:has(.platform-btn__icon-img) {
     background: transparent;
-    border: 1px solid #c0c0c0;
     box-sizing: border-box;
     overflow: hidden;
   }

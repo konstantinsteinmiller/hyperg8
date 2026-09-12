@@ -80,6 +80,13 @@ export const platforms: Record<string, PlatformDef> = {
     icon: `<g fill="currentColor"><path d="M6 8.5 3.95 6.45a1.45 1.45 0 0 1 2.05-2.05 1.45 1.45 0 0 1 2.05 2.05Z"/><path d="M12 9.4l2.25 1.3v2.6L12 14.6l-2.25-1.3v-2.6Z"/><path d="M16.4 16.2h3.2l1 1.2-2.6 3-2.6-3Z"/><circle cx="12" cy="6" r="1.9"/><circle cx="18" cy="6" r="1.9"/><circle cx="6" cy="12" r="1.9"/><circle cx="18" cy="12" r="1.9"/><circle cx="6" cy="18" r="1.9"/><circle cx="12" cy="18" r="1.9"/></g>`,
     iconImage: 'images/youtube-playables.webp',
   },
+  gamemonetize: {
+    id: 'gamemonetize',
+    label: 'GameMonetize',
+    color: '#7b3ff2',
+    icon: `<path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-2 14.5v-9l7 4.5-7 4.5Z"/>`,
+    iconImage: 'images/gamemonetize.webp',
+  },
   // gamepix: {
   //   id: 'gamepix',
   //   label: 'Gamepix',
