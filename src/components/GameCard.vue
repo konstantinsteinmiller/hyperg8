@@ -43,6 +43,11 @@ article.game-card(
           )
         .game-card__platforms-empty(v-if="!game.platforms.length")
           | {{ $t('card.notReleased') }}
+
+
+
+      section.game-card__embedded.flex.justify-center(v-if="game.embedded")
+        iframe(:src="game.embedded.link" :width="game.embedded.width", :height="game.embedded.height")
       section.game-card__purchase(v-if="game.windowsPurchase?.enabled")
         PlatformButton(:link="windowsLink")
         span.game-card__price(v-if="game.windowsPurchase.price") {{ game.windowsPurchase.price }}

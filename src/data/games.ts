@@ -20,6 +20,7 @@ export interface GameLink {
   url?: string
   /** marketing label override, e.g. "Coming soon" */
   label?: string
+
   /** if true, render disabled with "Coming soon" copy */
   upcoming?: boolean
 }
@@ -35,6 +36,11 @@ export interface GameDef {
   genres: string[]
   /** file inside `public/preview/` — added manually later, missing image falls back to a placeholder */
   preview: string
+  embedded?: {
+    link: string
+    width: string
+    height: string
+  }
   /** background gradient stops used by the card glow */
   accent: [string, string]
   platforms: GameLink[]
@@ -116,7 +122,7 @@ weaker.`,
       {platform: 'gamemonetize', url: 'https://uncached.gamemonetize.co/crvt23bbv3zouz2yvv9aktx282cpvn6p/#/'},
       {platform: 'poki', upcoming: true, url: '/survivalist'},
       {platform: 'crazygames', upcoming: true, url: 'https://www.crazygames.com/game/survivalist'},
-      // { platform: 'playgama', url: 'https://playgama.com/game/survivalist' },
+      { platform: 'playgama', url: 'https://playgama.ai/play/dmomdzpkds' },
       // { platform: 'wavedash', url: 'https://wavedash.com/games/survivalist' },
     ],
     windowsPurchase: {enabled: false},
@@ -243,16 +249,21 @@ weaker.`,
   },
   {
     id: 'midnight-analog',
-    title: 'Midnight Analog',
+    title: 'Game Mania',
     tagline: 'It\'s 3AM and the Wi-Fi\'s down — so every doodle in your notebook becomes a frantic 5-second game. A hand-drawn micro-game rush.',
     description:
       "It's 3 AM at a lakeside cabin. The power's out, the Wi-Fi's down, and you can't sleep — so you scribble strange ideas in a spiral notebook, and each becomes a frantic five-second doodle game. Plug a thrashing router cable, swat mosquitoes, go Super Saiyan, stomp bugs, tune a TV antenna through the static, and more. Survive a night of escalating micro-games and a boss on three hearts, until the morning sun rises. It's all hand-drawn ballpoint on paper.",
     genres: ['Arcade', 'Simulation', 'One-touch', 'Casual'],
-    preview: 'images/midnight-analog-promotion_800x450.webp',
+    preview: 'images/game-mania-promotion_800x450.webp',
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
-      {platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/midnight-analog'},
+      {platform: 'playgama', url: 'https://playgama.com/game/game-mania?clid=p_7ab79d29-c32e-4ace-bbe6-1d42ece7c5bb'},
     ],
+    embedded: {
+      link: 'https://playgama.com/export/game/game-mania',
+      width: '400wv',
+      height: '400vh'
+    },
     windowsPurchase: {enabled: false},
   },
   {

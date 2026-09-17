@@ -26,7 +26,7 @@ section#top.hero(ref="root")
         b {{ games.length }}
         span {{ $t('hero.stats.titles') }}
       .hero__stat
-        b 6+
+        b 8+
         span {{ $t('hero.stats.platforms') }}
       .hero__stat
         b ∞
