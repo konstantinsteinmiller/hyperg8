@@ -195,6 +195,26 @@ weaker.`,
     windowsPurchase: {enabled: false},
   },
   {
+    id: 'glyphyx',
+    title: 'Glyphyx',
+    tagline: 'Drag glowing rune stones onto a 4×4 board, swipe to aim, and watch both sides fire at once',
+    description:
+      `Glyphyx is a 90-second tactical duel on a 4×4 stone board. Every turn you drag
+one rune pebble onto a tile and swipe the direction it faces — and so does your
+enemy, in secret. Then everything fires at once: swords strike, bows skip a tile,
+arcane beams cut diagonals, shields absorb, crosses heal. Stack two matching
+runes into a Level 2 powerhouse, shatter enemy stones into rubble, and claim
+their tiles. Hold eight and you win. Fight three factions at once in the siege
+campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
+    genres: ['Arcade', 'Casual', 'One-tap', 'Chess-like'],
+    preview: 'images/glyphyx-promotion_800x450.webp',
+    accent: ['rgba(12,82,151,0.76)', 'rgba(232,20,25,0.66)'],
+    platforms: [
+      { platform: 'wavedash', url: 'https://wavedash.com/games/glyphyx' },
+    ],
+    windowsPurchase: {enabled: false},
+  },
+  {
     id: 'epicrolla',
     title: 'Epicrolla',
     tagline: 'One tap to switch directions. Endless rolling fun.',
