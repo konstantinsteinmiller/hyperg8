@@ -11,7 +11,20 @@
  * Windows-executable in-app-purchases:
  * Set `windowsPurchase.enabled = true` and provide `url` (and optionally `price`)
  * to surface the "Buy for Windows" call-to-action on the card.
+ *
+ * SEO: this array is the single source of truth for the game entries in
+ * index.html's JSON-LD. `pnpm seo` (also run by the pre-commit hook)
+ * regenerates them — never edit that block by hand.
+ *
+ * Images follow a naming convention by `id`, no per-game entry needed:
+ *   card image  public/images/<id>-promotion_800x450.webp
+ *   SEO image   public/preview/<id>-preview_400x225.jpg
  */
+
+export const SITE_URL = 'https://hyperg8.com'
+
+export const promotionImage = (id: string) => `images/${id}-promotion_800x450.webp`
+export const seoPreviewImage = (id: string) => `${SITE_URL}/preview/${id}-preview_400x225.jpg`
 
 export interface GameLink {
   /** id from `platforms.ts` */
@@ -34,8 +47,8 @@ export interface GameDef {
   descriptionLead?: string
   /** category chips shown above the title */
   genres: string[]
-  /** file inside `public/preview/` — added manually later, missing image falls back to a placeholder */
-  preview: string
+  /** extra search names for the SEO JSON-LD (`alternateName`) in index.html */
+  aliases?: string[]
   embedded?: {
     link: string
     width: string
@@ -59,8 +72,8 @@ export const games: GameDef[] = [
     descriptionLead: 'Pull. Launch. CHAOS.',
     description:
       'Fling your spinner into the arena with one simple swipe and watch the mayhem unfold! Smash into enemies, bounce off walls, and knock out every opponent to claim victory. Easy to pick up, impossible to put down. Jump in, start flinging, and let the chaos begin.',
-    genres: ['Action', 'Arena', 'Casual', 'Relaxing', 'PvP'],
-    preview: 'images/chaos-arena-promotion_800x450.webp',
+    genres: ['Action', 'Arena', 'Casual', 'Spinner', 'PvP'],
+    aliases: ['chaos-arena', 'ChaosArena'],
     accent: ['#ff48c6', '#7b3ff2'],
     platforms: [
       {platform: 'crazygames', url: 'https://www.crazygames.com/game/chaos-arena'},
@@ -71,19 +84,35 @@ export const games: GameDef[] = [
     windowsPurchase: {enabled: false},
   },
   {
-    id: 'nexusorbiter',
-    title: 'Nexus Orbiter',
-    tagline: 'One tap. One drone. Hold the line.',
+    id: 'mega-droid',
+    title: 'Mega Droid',
+    tagline: 'Beam into robot-infested sectors as Flux and shoot your way to the android bosses to stop Vex.',
     description:
-      'Tap to flip your orbital drone — auto-fire defense vs bosses, EMPs, homing drones, and glue bombs. Single-finger orbital-defense arcade. Your drone orbits a fragile space station and auto-fires at incoming hazards — tap to flip the orbit direction.',
-    genres: ['Arcade', 'Casual', 'One-tap', 'Orbital Defense'],
-    preview: 'images/nexusorbiter-promotion_800x450.webp',
+      `Rogue machines have overrun the city's sectors, and only Flux can take them back. Beam into each sector, explore rooms and corridors, and blast Hardhats, drones and brutes with your charge cannon. Hold to charge, release at the perfect moment for a critical hit, raise your shield to block, and parry right as the ring closes. Open supply chests for new gear, level up, wire your skill circuits, and defeat each Core Master to copy its special weapon.`,
+    genres: ["Action-Adventure", "FPS", "Platformer", "3D"],
+    aliases: ['Mega Droid', 'Mega Man', 'Mega Android', 'MegaDroid'],
     accent: ['#00d4ff', '#a259ff'],
     platforms: [
-      {platform: 'crazygames', url: 'https://www.crazygames.com/game/nexusorbiter'},
-      {platform: 'playgama', url: 'https://playgama.com/game/nexusorbiter'},
-      // { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
-      // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
+      {platform: 'playgama', url: 'https://playgama.com/game/mega-droid?clid=p_7ab79d29-c32e-4ace-bbe6-1d42ece7c5bb'},
+      {platform: 'poki', upcoming: true, url: '/mega-droid'},
+      {platform: 'crazygames', upcoming: true, url: ''},
+      // {platform: 'gamemonetize', url: ''},
+      // { platform: 'wavedash', url: 'https://wavedash' },
+    ],
+    windowsPurchase: {enabled: false},
+  },
+  {
+    id: 'merge-idle-war',
+    title: 'Merge Idle War',
+    tagline: `Merge elemental units into a 20-tier army and crush endless enemy waves. Combos, fever gold rushes, meteor storms — the war never stops!`,
+    description:
+      `Merge Idle War is a hybrid-casual merge auto-battler. Tap to spawn recruits, drag matching units together to forge ever-stronger elemental fighters — from Living Droplet to the black-hole-wielding Cosmic Mass — and drop them into the arena, where they battle endless waves on their own. Chain kills into combos, ignite FEVER for double gold, unleash the Meteor Storm ultimate and buy permanent upgrades. Bosses enrage, the gate cracks, but the war never ends — how far can you push?`,
+    genres: ['Arcade', 'HyperCasual', 'Merge', 'Incremental'],
+    aliases: ['Merge Idle War', 'Mergeidlewar', 'Merge war', 'merge-idle-war'],
+    accent: ['#ff595f', '#00d4ff'],
+    platforms: [
+      {platform: 'crazygames', url: 'https://www.crazygames.com/game/merge-idle-war'},
+      {platform: 'playgama', url: 'https://playgama.com/game/merge-idle-war'},
     ],
     windowsPurchase: {enabled: false},
   },
@@ -94,7 +123,7 @@ export const games: GameDef[] = [
     description:
       'Stack a tower, bolt on turrets, and hold the gate. Every wave hits harder — rebuild between them or watch your walls come down block by block.',
     genres: ['Tower Defense', 'Casual', 'Strategy'],
-    preview: 'images/tower-siege-promotion_800x450.webp',
+    aliases: ['tower-siege', 'tower siege', 'siege tower'],
     accent: ['#e6df29', '#a259ff'],
     platforms: [
       // {platform: 'crazygames', upcoming: true, url: 'https://www.crazygames.com/game/tower-siege'},
@@ -116,7 +145,7 @@ harder and blue ones to shoot faster, dodge everything solid, and kill what is
 coming down the lane. Every stage ends with a boss. Die, and it comes back
 weaker.`,
     genres: ['Runner', 'Gun', 'Casual', 'Arcade', '1-Finger'],
-    preview: 'images/survivalist-promotion_800x450.webp',
+    aliases: ['survival ist'],
     accent: ['#00d4ff', '#a259ff'],
     platforms: [
       {platform: 'playgama', url: 'https://playgama.ai/play/dmomdzpkds'},
@@ -134,7 +163,7 @@ weaker.`,
     description:
       `A paper army marches across a pop-up storybook, and you are the hand that folds it. Swipe the dotted creases to raise walls, snap ravines shut on marching knights, fling catapults back with a flap and tear the castle towers flat. Six hand-crafted pages build from a border skirmish to a siege, then the castle itself unfolds into an origami dragon. Break its creases, make the last fold, and watch it become a very confused frog.`,
     genres: ["3D", "Popup Book", "Casual", "Arcade", "1-Finger"],
-    preview: 'images/aethel-fold-promotion_800x450.webp',
+    aliases: ['Athel Fold'],
     accent: ['rgba(203,255,161,0.66)', '#a259ff'],
     platforms: [
       {platform: 'poki', upcoming: true, url: '/aethel-fold'},
@@ -146,35 +175,19 @@ weaker.`,
     windowsPurchase: {enabled: false},
   },
   {
-    id: 'mega-droid',
-    title: 'Mega Droid',
-    tagline: 'Beam into robot-infested sectors as Flux and shoot your way to the android bosses to stop Vex.',
+    id: 'nexusorbiter',
+    title: 'Nexus Orbiter',
+    tagline: 'One tap. One drone. Hold the line.',
     description:
-      `Rogue machines have overrun the city's sectors, and only Flux can take them back. Beam into each sector, explore rooms and corridors, and blast Hardhats, drones and brutes with your charge cannon. Hold to charge, release at the perfect moment for a critical hit, raise your shield to block, and parry right as the ring closes. Open supply chests for new gear, level up, wire your skill circuits, and defeat each Core Master to copy its special weapon.`,
-    genres: ["Action-Adventure", "FPS", "Platformer", "3D"],
-    preview: 'images/mega-droid-promotion_800x450.webp',
+      'Tap to flip your orbital drone — auto-fire defense vs bosses, EMPs, homing drones, and glue bombs. Single-finger orbital-defense arcade. Your drone orbits a fragile space station and auto-fires at incoming hazards — tap to flip the orbit direction.',
+    genres: ['Arcade', 'Casual', 'One-tap', 'Orbital Defense'],
+    aliases: ['nexus-orbiter', 'nexusorbiter', 'NexusOrbiter'],
     accent: ['#00d4ff', '#a259ff'],
     platforms: [
-      {platform: 'playgama', url: 'https://playgama.ai/play/hnwxhldhrw'},
-      {platform: 'poki', upcoming: true, url: '/mega-droid'},
-      // {platform: 'gamemonetize', url: ''},
-      {platform: 'crazygames', upcoming: true, url: ''},
-      // { platform: 'wavedash', url: 'https://wavedash' },
-    ],
-    windowsPurchase: {enabled: false},
-  },
-  {
-    id: 'merge-idle-war',
-    title: 'Merge Idle War',
-    tagline: `Merge elemental units into a 20-tier army and crush endless enemy waves. Combos, fever gold rushes, meteor storms — the war never stops!`,
-    description:
-      `Merge Idle War is a hybrid-casual merge auto-battler. Tap to spawn recruits, drag matching units together to forge ever-stronger elemental fighters — from Living Droplet to the black-hole-wielding Cosmic Mass — and drop them into the arena, where they battle endless waves on their own. Chain kills into combos, ignite FEVER for double gold, unleash the Meteor Storm ultimate and buy permanent upgrades. Bosses enrage, the gate cracks, but the war never ends — how far can you push?`,
-    genres: ['Arcade', 'HyperCasual', 'Merge', 'Incremental'],
-    preview: 'images/merge-idle-war-promotion_800x450.webp',
-    accent: ['#00d4ff', '#ff595f'],
-    platforms: [
-      {platform: 'crazygames', url: 'https://www.crazygames.com/game/merge-idle-war'},
-      {platform: 'playgama', url: 'https://playgama.com/game/merge-idle-war'},
+      {platform: 'crazygames', url: 'https://www.crazygames.com/game/nexusorbiter'},
+      {platform: 'playgama', url: 'https://playgama.com/game/nexusorbiter'},
+      // { platform: 'glitch', url: 'https://www.glitch.fun/games/fa0460e3-def6-493e-8ad5-cc7004ed6992' },
+      // { platform: 'wavedash', url: 'https://wavedash.com/games/nexusorbiter' },
     ],
     windowsPurchase: {enabled: false},
   },
@@ -185,7 +198,7 @@ weaker.`,
     description:
       `Elemental Barrage is a casual volley shooter, the real Disco shows when you land a Combo and the Fever lights up the screen. Monsters march down the board row by row — drag back, aim and release a barrage of elemental balls that bounce through them. Grab +1 pickups: when your ball tray overflows, twin balls merge into mightier elementals with burn, freeze, chain lightning and more. Every 10 rows a boss enrages; beat it to set a checkpoint. Buy the glowing upgrade, collect launchers and ball skins, and chase the Daily Barrage.`,
     genres: ['Arcade', 'Bubble Shooter', 'One-tap', 'Merge'],
-    preview: 'images/elemental-barrage-promotion_800x450.webp',
+    aliases: ['Elemetal barrage', 'elemental', 'elemental barrage', 'elemental barage'],
     accent: ['#e6df29', 'rgba(161,255,177,0.66)'],
     platforms: [
       // {platform: 'crazygames', url: 'https://www.crazygames.com/game/epicrolla'},
@@ -207,7 +220,7 @@ runes into a Level 2 powerhouse, shatter enemy stones into rubble, and claim
 their tiles. Hold eight and you win. Fight three factions at once in the siege
 campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     genres: ['Arcade', 'Casual', 'One-tap', 'Chess-like'],
-    preview: 'images/glyphyx-promotion_800x450.webp',
+    aliases: ['Glyph', 'Glyphyx'],
     accent: ['rgba(12,82,151,0.76)', 'rgba(232,20,25,0.66)'],
     platforms: [
       {platform: 'wavedash', url: 'https://wavedash.com/games/glyphyx'},
@@ -222,7 +235,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
       'Tap to navigate the rolling ball through a winding course of rifts, coins, and obstacles. ' +
       'Epicrolla is a one-touch arcade game about timing and precision. The ball rolls forward automatically, and the player taps to switch its direction of movement, navigating through increasingly challenging levels.',
     genres: ['Arcade', 'HyperCasual', 'One-tap', 'Dodge'],
-    preview: 'images/epicrolla-promotion_800x450.webp',
+    aliases: ['Epicrolla', 'epicrolla', 'epic-rolla'],
     accent: ['#00d4ff', '#a259ff'],
     platforms: [
       {platform: 'crazygames', url: 'https://www.crazygames.com/game/epicrolla'},
@@ -239,7 +252,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
       scythe three times your size. Slither through medieval villages devouring everything smaller than you
        — bugs, peasants, chickens, knights, siege engines, whole castles. Every bite makes you bigger, faster and hungrier, until the map that once towered over you fits in your mouth.`,
     genres: ["Arcade", "Casual", "3d", "1-Finger"],
-    preview: 'images/reaper-goo-promotion_800x450.webp',
+    aliases: ['reaper-goo', 'Reaper Goo', 'ReaperGoo', 'Reaper', 'Go'],
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
       {platform: 'wavedash', url: 'https://wavedash.com/games/reaper-goo'},
@@ -254,7 +267,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'Card Quest is a card battle game with Triple Triad game rules and strong fantasy visuals and a campaign to collect all fairy cards.',
     genres: ['Strategy', 'Card', 'Deck-builder', 'TrippleTriad-like'],
-    preview: 'images/card-quest-promotion_800x450.webp',
+    aliases: ['card-quest', 'CardQuest'],
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
       {platform: 'playgama', url: 'https://playgama.com/game/card-quest'},
@@ -269,7 +282,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'Something is crawling across the picnic blanket, and you are the shoe. Drag to move your foot, tap for a quick stomp, hold for a ground-shaking SLAM. Squish fast to build a Splat Chain — the multiplier climbs to ×50 and the music speeds up with it. Fill the Juice vial and unleash SPLAT FEVER: ten seconds of a giant golden boot that flattens everything it touches. 40 levels, 4 worlds, 10 bugs, 4 bosses and 6 shoes to unlock. No reading required, just tap.',
     genres: ["Action", "1 Finger", "Funny", "Arcade"],
-    preview: 'images/bug-crunch-promotion_800x450.webp',
+    aliases: ['bug-crunch', 'Bug Crush', 'crush', 'bug'],
     accent: ['#5e83ff', 'rgba(225,218,26,0.97)'],
     platforms: [
       {platform: 'wavedash', url: 'https://wavedash.com/games/bug-crunch'},
@@ -283,7 +296,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'Two gears, one chain, a whole jungle to mow down. Swing your saw-bot island-to-island, slice grass, dodge obstacles, climb 20 hand-tuned stages.',
     genres: ['Platform', 'Arcade', 'Precision', 'Casual'],
-    preview: 'images/spin-and-mow-promotion_800x450.webp',
+    aliases: ['spin-and-mow', 'Spin&Mow', 'SpinAndMow'],
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
       {platform: 'playgama', url: 'https://playgama.com/game/spinmow'},
@@ -297,7 +310,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'Merge Legions is an auto-battler roguelite built on one verb: drag a unit onto its twin. Buy elementals from the shop, merge identical ones into 50 ever-stranger forms across eight families, and arrange a five-slot battle line. Then watch it fight another commander\'s army. Pair families for traits, collect relics, topple bosses, and claim the crown with ten wins. Your best legion keeps defending your Garrison while you\'re away..',
     genres: ['Merge', 'Arcade', 'Fighting', 'Casual'],
-    preview: 'images/merge-legions-promotion_800x450.webp',
+    aliases: ['merge-legions', 'MergeLegions', 'merge legions'],
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
       {platform: 'wavedash', url: 'https://wavedash.com/games/merge-legions'},
@@ -311,7 +324,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'An overpowered version of an bullet hell.',
     genres: ["Bullet Hell", "Arcade", "Survivors", "Casual"],
-    preview: 'images/splinter-king-promotion_800x450.webp',
+    aliases: ['splinter-king', 'SplinterKing', 'Splinter King'],
     accent: ['#00d4ff', '#3a59ff'],
     platforms: [
       {platform: 'playgama', upcoming: true, url: 'https://playgama.com/game/splinter-king'},
@@ -325,7 +338,6 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'Tic Tac Toe is too boring, then use skills that you can build from your deck and destroy the enemy! Supa Tic Tac Toe is a card-based twist on the classic tic tac toe game. Players build a deck of unique cards, each with special abilities that can turn the tide of the game.',
     genres: ['Deckbuilder', 'Arcade', 'Casual', 'Strategy'],
-    preview: 'images/supa-tic-tac-toe-promotion_800x450.webp',
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
       {platform: 'playgama', url: 'https://playgama.com/game/supa-tic-tac-toe'},
@@ -340,7 +352,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       'A turn-based physics duel of clashing tops. Bolt together heads, attack rings and bottoms, then send your machine into the arena to outlast the competition. Smart builds beat brute force.',
     genres: ['Strategy', 'Physics', 'Casual'],
-    preview: 'images/spinner-machines-promotion_800x450.webp',
+    aliases: ['spinner-machines', 'SpinnerMachines'],
     accent: ['#00d4ff', '#3a59ff'],
     platforms: [
       {platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/spinner-machines'},
@@ -354,7 +366,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       "It's 3 AM at a lakeside cabin. The power's out, the Wi-Fi's down, and you can't sleep — so you scribble strange ideas in a spiral notebook, and each becomes a frantic five-second doodle game. Plug a thrashing router cable, swat mosquitoes, go Super Saiyan, stomp bugs, tune a TV antenna through the static, and more. Survive a night of escalating micro-games and a boss on three hearts, until the morning sun rises. It's all hand-drawn ballpoint on paper.",
     genres: ['Arcade', 'Simulation', 'One-touch', 'Casual'],
-    preview: 'images/game-mania-promotion_800x450.webp',
+    aliases: ['midnight-analog', 'Midnight Analog', 'Gamemania', 'Game mania', 'game mania', 'game-mania'],
     accent: ['#5e83ff', '#3a59ff'],
     platforms: [
       {platform: 'playgama', url: 'https://playgama.com/game/game-mania?clid=p_7ab79d29-c32e-4ace-bbe6-1d42ece7c5bb'},
@@ -373,7 +385,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       "A neon arcade reflex game built on a single read: right colour on top, right lane, before the candy lands. Your cube has four coloured faces, and only the one pointing up can catch anything. So every drop asks two questions at once — which lane, and which face? Get greedy and you will answer one of them wrong.",
     genres: ['Arcade', 'Casual', 'One-touch'],
-    preview: 'images/candy-crusher-promotion_800x450.webp',
+    aliases: ['candy crusher', 'candy crush'],
     accent: ['#e6df29', 'rgba(0,40,78,0.76)'],
     platforms: [
       {platform: 'wavedash', url: 'https://wavedash.com/games/candy-crusher'},
@@ -387,7 +399,7 @@ campaign, chain victories for up to 3× gold, and unlock new runes and skins.`,
     description:
       "Solariancer is a one-touch arcade idle game about herding celestial bodies into the corona of a hungry Sun. The Sun is both the player's primary engine of progress and their constant antagonist — it pulls everything in, but only ripe bodies that have soaked enough heat in orbit pay out when they hit the surface.",
     genres: ['Arcade', 'Simulation', 'One-touch', 'Casual'],
-    preview: 'images/solariancer-promotion_800x450.webp',
+    aliases: ['solariancer', 'Solariancer'],
     accent: ['#ff8a00', '#ff48c6'],
     platforms: [
       {platform: 'itch', url: 'https://konstantinsteinmiller.itch.io/solariancer'},

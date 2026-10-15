@@ -14,7 +14,7 @@ article.game-card(
           span(v-if="!hasImage") {{ game.title }}
         img.game-card__image(
           v-if="hasImage"
-          :src="game.preview"
+          :src="promotionImage(game.id)"
           :alt="$t('card.previewAlt', { title: game.title })"
           loading="lazy"
           decoding="async"
@@ -56,7 +56,7 @@ article.game-card(
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { GameDef, GameLink } from '@/data/games'
+import { promotionImage, type GameDef, type GameLink } from '@/data/games'
 import useReveal from '@/use/useReveal'
 import PlatformButton from '@/components/PlatformButton.vue'
 

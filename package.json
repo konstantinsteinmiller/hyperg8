@@ -5,6 +5,8 @@
   "type": "module",
   "packageManager": "pnpm@9.12.0",
   "scripts": {
+    "seo": "node scripts/generate-seo.mjs",
+    "prepare": "git config core.hooksPath .githooks",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",

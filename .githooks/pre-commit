@@ -1,0 +1,4 @@
+#!/bin/sh
+# Regenerate index.html SEO game entries from src/data/games.ts.
+node scripts/generate-seo.mjs || exit 1
+git add index.html
