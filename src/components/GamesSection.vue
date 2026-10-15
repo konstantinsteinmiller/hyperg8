@@ -34,7 +34,8 @@ useParallax(bgRef, 0.18)
     position: absolute;
     left: 0;
     right: 0;
-    height: 16%;
+    /* fixed, not %: the section grows with every game and a % fade swallowed the first row */
+    height: clamp(60px, 8vw, 120px);
     pointer-events: none;
     z-index: 2;
   }
