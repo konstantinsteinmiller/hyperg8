@@ -65,7 +65,7 @@ export const games: GameDef[] = [
     platforms: [
       {platform: 'crazygames', url: 'https://www.crazygames.com/game/chaos-arena'},
       {platform: 'youtube', url: 'https://www.youtube.com/playables/UgkxVPElsrqqEdsNc3OxEFqvbcGPh23zTmtb'},
-      {platform: 'playstore', upcoming: true, label: 'Coming soon'},
+      {platform: 'playstore', url: 'https://play.google.com/store/apps/details?id=com.chaos.arena'},
       {platform: 'appstore', upcoming: true, label: 'Coming soon'},
     ],
     windowsPurchase: {enabled: false},
