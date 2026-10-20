@@ -166,7 +166,7 @@ const onLeave = () => {
     position: relative;
     border-radius: 22px;
     overflow: hidden;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
     background:
       linear-gradient(135deg, color-mix(in srgb, var(--accent-a) 80%, #1a1f3a), color-mix(in srgb, var(--accent-b) 80%, #2a1d3a));
     box-shadow:
