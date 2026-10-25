@@ -54,4 +54,4 @@ auf Wunsch. Sie können sich außerdem bei Ihrer Datenschutzbehörde beschweren.
 ### 8. Kontakt
 
 #### Konstantin Steinmiller, Wildgrund 4, 33442 Herzebrock-Clarholz, Deutschland
-**Email:** koststone@gmail.com
+**Email:** hyperg8.studio@gmail.com

@@ -37,4 +37,4 @@ it—quite simply because it does not exist in our system.
 If you have any questions regarding this Privacy Policy or the app, you can reach us as follows:
 
 #### Konstantin Steinmiller Wildgrund 4, 33442 Herzebrock-Clarholz, Germany
-**Email:** koststone@gmail.com
+**Email:** hyperg8.studio@gmail.com

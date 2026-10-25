@@ -30,4 +30,4 @@ auszuwerten. Geräteinformationen: Wir greifen nicht auf Ihre Gerätekennung (ID
    Sollten Sie Fragen zu dieser Datenschutzerklärung oder zur App haben, können Sie uns wie folgt erreichen:
 
 #### Konstantin Steinmiller, Wildgrund 4, 33442 Herzebrock-Clarholz, Deutschland 
-**Email:** koststone@gmail.com
+**Email:** hyperg8.studio@gmail.com

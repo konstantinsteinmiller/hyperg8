@@ -50,4 +50,4 @@ entry; send us your nickname and we will delete it on request. You may also comp
 ### 8. Contact
 
 #### Konstantin Steinmiller, Wildgrund 4, 33442 Herzebrock-Clarholz, Germany
-**Email:** koststone@gmail.com
+**Email:** hyperg8.studio@gmail.com
