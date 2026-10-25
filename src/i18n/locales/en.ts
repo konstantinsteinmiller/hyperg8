@@ -26,7 +26,7 @@ export default {
       accent2: ' play.',
     },
     lede:
-      'hyperg8 is the studio behind Chaos Arena, Nexus Orbiter, Card Quest, Spin&Mow, Spinner Machines and Solariancer — bite-sized arcade, action, card, physics and idle games designed for one more round.',
+      'hyperg8 is the studio behind Chaos Arena, MegaDroid, BattleCross, Tower Siege and Merge Idle War — bite-sized arcade, action, strategy and idle games designed for one more round.',
     ctaPrimary: 'See the games',
     ctaSecondary: 'About the studio',
     stats: {

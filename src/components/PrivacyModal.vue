@@ -20,6 +20,8 @@ import useModals from '@/use/useModals'
 import privacyMd from '@/assets/privacy-policy.md?raw'
 import chaosArenaEnMd from '@/assets/documentation/rights/chaos-arena-privacy-policy-en.md?raw'
 import chaosArenaDeMd from '@/assets/documentation/rights/chaos-arena-privacy-policy-de.md?raw'
+import battlecrossEnMd from '@/assets/documentation/rights/battlecross-privacy-policy-en.md?raw'
+import battlecrossDeMd from '@/assets/documentation/rights/battlecross-privacy-policy-de.md?raw'
 
 const { privacyVariant } = useModals()
 
@@ -27,6 +29,8 @@ const source = computed(() => {
   switch (privacyVariant.value) {
     case 'chaos-arena-en': return chaosArenaEnMd
     case 'chaos-arena-de': return chaosArenaDeMd
+    case 'battlecross-en': return battlecrossEnMd
+    case 'battlecross-de': return battlecrossDeMd
     default: return privacyMd
   }
 })

@@ -1,7 +1,7 @@
 import { computed, ref } from 'vue'
 
 export type ModalKey = 'privacy' | 'impressum' | null
-export type PrivacyVariant = 'default' | 'chaos-arena-en' | 'chaos-arena-de'
+export type PrivacyVariant = 'default' | 'chaos-arena-en' | 'chaos-arena-de' | 'battlecross-en' | 'battlecross-de'
 
 const active = ref<ModalKey>(null)
 const privacyVariant = ref<PrivacyVariant>('default')

@@ -38,6 +38,8 @@ const QUERY_TO_MODAL: Record<string, Target> = {
   'privacy-policy': { modal: 'privacy' },
   'chaos-arena-privacy-policy-en': { modal: 'privacy', variant: 'chaos-arena-en' },
   'chaos-arena-privacy-policy-de': { modal: 'privacy', variant: 'chaos-arena-de' },
+  'battlecross-privacy-policy-en': { modal: 'privacy', variant: 'battlecross-en' },
+  'battlecross-privacy-policy-de': { modal: 'privacy', variant: 'battlecross-de' },
   'imprint': { modal: 'impressum' },
 }
 
